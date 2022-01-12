@@ -1,0 +1,508 @@
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+
+
+</head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #e4c2a3;
+        color: rgb(87, 41, 55)
+    }
+    
+    table {
+        width: 700px;
+        height: 500px;
+        border: solid;
+        background-color: white;
+        text-align: center;
+        border-color: rgb(87, 41, 55);
+        margin: -5px;
+    }
+    
+    td {
+        font-size: 20px;
+        width: 50px;
+        height: 80px;
+        color: rgb(13, 14, 13);
+        border-color: rgb(231, 149, 149);
+        background-color: rgb(252, 226, 192);
+    }
+    
+    .text-verde {
+        color: rgb(43, 201, 29);
+        background-image: url("POSITIVO.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 80px;
+        height: 50px;
+        background-size: 70%;
+    }
+    
+    .verde {
+        color: rgb(43, 201, 29);
+    }
+    
+    .red {
+        color: rgb(233, 24, 52);
+    }
+    
+    .text-red {
+        color: rgb(233, 24, 52);
+        background-image: url("NEGATIVO.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 80px;
+        height: 50px;
+        background-size: 70%;
+    }
+</style>
+
+<div>
+
+    <body>
+        <center>
+            <h1>Tabela de Notas</h1>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº do aluno</th>
+                        <th>Nota</th>
+                        <th>Média Final </th>
+                        <th>Indicativo visual </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(0)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(1)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(2)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(3)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(4)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(5)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(6)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(7)"></td>
+
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(8)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(9)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(10)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(11)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(12)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(13)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(14)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(15)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(16)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(17)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(18)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(19)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(20)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(21)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(22)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(23)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(24)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(25)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(26)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(27)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(28)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(29)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(30)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(31)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(32)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(33)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(34)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(35)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(36)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(37)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(38)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td><input type="number" value="0" min="0.0" step="0.1" max="10.0" name="n1" onchange="calcula_media(39)"></td>
+                        <td>
+                            <div name="media">0,0</div>
+                        </td>
+                        <td>
+                            <div name="resultado"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+        </center>
+</div>
+
+<script>
+    function calcula_media(i) {
+        var n1 = document.getElementsByName("n1")[i].value;
+        var media = document.getElementsByName("media");
+        var resultado = document.getElementsByName("resultado");
+
+        var calculo = n1;
+
+        if (calculo >= 6) {
+            media[i].innerHTML = "<div class='verde'>" + calculo + "</div>";
+            resultado[i].innerHTML = "<div class='text-verde'></div>";
+        } else {
+            media[i].innerHTML = "<div class='red'>" + calculo + "</div>";
+            resultado[i].innerHTML = "<div class='text-red'></div>";
+        }
+
+
+    }
+</script>
+</body>
+
+</html>
